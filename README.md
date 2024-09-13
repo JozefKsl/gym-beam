@@ -19,15 +19,14 @@ Materialized View Structure
 
 The materialized view (`product_sale_per_day` dataset) is designed with the following structure:
 
------------------------------------------------
-| Column	       | Type                     |  
-----------------------------------------------
-| product_id	   | integer                  |  
-| product_name	   | character varying(255)   |
-| sales_date	   | date                     |
-| qty_sold	       | bigint                   |
-| qty_left_on_hand | integer                  |
------------------------------------------------
+| Column            | Type                     |
+|-------------------|--------------------------|
+| product_id        | integer                  |
+| product_name      | character varying(255)   |
+| sales_date        | date                     |
+| qty_sold          | bigint                   |
+| qty_left_on_hand  | integer                  |
+
 
 Addressing Business Questions
 
@@ -77,6 +76,5 @@ Addressing Business Questions
 
 6. How many bestsellers were sold out at the end of the day in the past? Which ones were they?
 
-    View Analysis: We would first need to define bestsellers by `sum(qty_sold)` for each product in the previous calendar month (we would limit the number of results by `total_count * 0.1`). After identifying the top-selling products, we can check when they had `qty_left_on_hand` = 0.
-
+    View Analysis: We would first need to define bestsellers by calculating `sum(qty_sold)` for each product in the previous calendar month, filter out all where `qty_left_on_hand` > 0, sort records in descending order by `sum_qty_sold` and limit the number of results by `total_count * 0.1`. This way we should be able to get list of bestsellers that were sold out at the end of the day in the past.
     
