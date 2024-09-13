@@ -37,7 +37,7 @@ Addressing Business Questions
 
     Example dashboard built in Tableau:
 
-    ![alt text](<Screenshot 2024-09-12 at 23.05.11.png>)
+    ![alt text](<dashboard_stockout_forecast.png>)
 
     I followed these steps:
 
@@ -54,7 +54,7 @@ Addressing Business Questions
 
     Example dashboard built in Tableau: 
 
-    ![alt text](<Screenshot 2024-09-12 at 18.27.26.png>)
+    ![alt text](<dashboard_past_sales_figures.png>)
 
 
 3. How many products were sold out at the end of the day in the past? Which ones were they?
@@ -63,11 +63,11 @@ Addressing Business Questions
 
     Example dashboard built in Tableau
 
-    ![alt text](<Screenshot 2024-09-12 at 19.37.54.png>)
+    ![alt text](<dashboard_eod_stockouts.png>)
 
 4. Which products were out of stock for 5 or more consecutive days?
 
-    View Analysis: This requires consecutive days where `qty_left_on_hand` = 0 for a product. The view has enough data to analyze this using SQL window functions or BI tool logic.
+    View Analysis: This requires consecutive days where `qty_left_on_hand` was 0 for a product. The view has enough data to analyze this using SQL window functions or BI tool logic.
 
 
 5. Which products were out of stock the longest?
