@@ -20,7 +20,7 @@ Materialized View Structure
 The materialized view (`product_sale_per_day` dataset) is designed with the following structure:
 
 | Column            | Type                     |
-|-------------------|--------------------------|
+| ----------------- | ------------------------ |
 | product_id        | integer                  |
 | product_name      | character varying(255)   |
 | sales_date        | date                     |
