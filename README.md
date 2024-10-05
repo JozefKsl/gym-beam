@@ -2,7 +2,7 @@ How to run this POC:
 
 Requirements: node.js, npm, docker
 
-1. `cd gym-beam`
+1. `cd sales-data-pipeline`
 2. Run docker container (that will start the postgres instance locally): `docker-compose up -d`
 3. Install dependencies: `npm i`
 4. Create sql tables: `npx knex migrate:latest`
